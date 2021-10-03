@@ -57,6 +57,17 @@ function my_keydown(e) {
 		right();
 		console.log("right");
 	}
+	console.log(ballx +"and"+ bally);
+	console.log(holex +"and"+ holey);
+
+	if (Math.sqrt(Math.pow(holex - ballx,2) + Math.pow(holey - bally,2)) == 0) {
+		canvas.remove(ball);
+		console.log("Collision Detected");
+		document.getElementById("hd3").innerHTML = "You've Won! <br> You will be sent to a new game in 5 seconds";
+		setTimeout(function () {
+			open("https://127.0.0.1:5500/Golf/");
+		}, 5000);
+	}
 }
 
 function up() {
@@ -89,13 +100,4 @@ function right() {
 		canvas.remove(ball);
 		newImage();
 	}
-}
-
-if (ballx == holex && bally == holey) {
-	canvas.remove(ball);
-	console.log("Collision Detected");
-	document.getElementById("hd3").innerHTML = "You've Won. <br> Note: You will be sent to a new game in 5 seconds";
-	setTimeout(function () {
-		open("https://127.0.0.1:5500/Golf/");
-	}, 5000);
 }
