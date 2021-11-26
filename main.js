@@ -1,3 +1,5 @@
+//start
+
 canvas = new fabric.Canvas("mycanvas");
 var ballx = 50;
 var bally = 50;
