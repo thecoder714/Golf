@@ -67,7 +67,7 @@ function my_keydown(e) {
 		console.log("Collision Detected");
 		document.getElementById("hd3").innerHTML = "You've Won! <br> You will be sent to a new game in 5 seconds";
 		setTimeout(function () {
-			open("https://127.0.0.1:5500/Golf/");
+			open("https://aarush-jha.github.io/Golf/");
 		}, 5000);
 	}
 }
